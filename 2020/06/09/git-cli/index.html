@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="https://michaelgmx.github.io">
   <title>git常用cli | 小麦片</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一、简单总结经常使用的git命令：1. 创建仓库github中创建 2. 拉取仓库 至 本地1git clone &lt;url&gt;   3. 本地创建新分支 | 删除新分支12git checkout -b &lt;branch_name&gt;git branch -d &lt;branch_name&gt;   4. 本地编辑代码5. 加入本地暂存区12git add &lt;file_">
+  <meta name="description" content="一、简单总结经常使用的git命令：1. 创建仓库github中创建 2. 拉取仓库 至 本地1git clone &lt;url&gt;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="git常用cli">
 <meta property="og:url" content="https://michaelgmx.github.io/2020/06/09/git-cli/index.html">
 <meta property="og:site_name" content="小麦片">
-<meta property="og:description" content="一、简单总结经常使用的git命令：1. 创建仓库github中创建 2. 拉取仓库 至 本地1git clone &lt;url&gt;   3. 本地创建新分支 | 删除新分支12git checkout -b &lt;branch_name&gt;git branch -d &lt;branch_name&gt;   4. 本地编辑代码5. 加入本地暂存区12git add &lt;file_">
+<meta property="og:description" content="一、简单总结经常使用的git命令：1. 创建仓库github中创建 2. 拉取仓库 至 本地1git clone &lt;url&gt;">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-06-08T16:57:16.000Z">
-<meta property="article:modified_time" content="2020-06-08T17:11:57.082Z">
+<meta property="article:modified_time" content="2020-06-09T15:49:17.332Z">
 <meta property="article:author" content="小麦片">
 <meta property="article:tag" content="git">
 <meta property="article:tag" content="git cli">
@@ -55,7 +55,7 @@
 		  <h1 class="header-author"><a href="/">小麦片</a></h1>
 		</hgroup>
 		
-		<p class="header-subtitle">想做些什么，却又止步不前</p>
+		<p class="header-subtitle">小麦片何时长大...</p>
 		
 
 		<nav class="header-menu">
@@ -109,7 +109,7 @@
 			  <h1 class="header-author js-header-author">小麦片</h1>
 			</hgroup>
 			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>想做些什么，却又止步不前<i class="icon icon-quo-right"></i></p>
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>小麦片何时长大...<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -171,6 +171,7 @@
         <h3 id="一、简单总结经常使用的git命令："><a href="#一、简单总结经常使用的git命令：" class="headerlink" title="一、简单总结经常使用的git命令："></a>一、简单总结经常使用的git命令：</h3><h5 id="1-创建仓库"><a href="#1-创建仓库" class="headerlink" title="1. 创建仓库"></a>1. 创建仓库</h5><p>github中创建</p>
 <h5 id="2-拉取仓库-至-本地"><a href="#2-拉取仓库-至-本地" class="headerlink" title="2. 拉取仓库 至 本地"></a>2. 拉取仓库 至 本地</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone &lt;url&gt;</span><br></pre></td></tr></table></figure>
 
+<a id="more"></a>
 
 <h5 id="3-本地创建新分支-删除新分支"><a href="#3-本地创建新分支-删除新分支" class="headerlink" title="3. 本地创建新分支 | 删除新分支"></a>3. 本地创建新分支 | 删除新分支</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b &lt;branch_name&gt;</span><br><span class="line">git branch -d &lt;branch_name&gt;</span><br></pre></td></tr></table></figure>
 
@@ -189,7 +190,29 @@
 
 <h5 id="9-更新-合并-比较差异"><a href="#9-更新-合并-比较差异" class="headerlink" title="9. 更新/合并/比较差异"></a>9. 更新/合并/比较差异</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git megre &lt;branch_name&gt;</span><br><span class="line">git diff &lt;source_branch&gt; &lt;target_branch&gt;</span><br></pre></td></tr></table></figure>
 
-<h3 id="二、git相关的一些参考"><a href="#二、git相关的一些参考" class="headerlink" title="二、git相关的一些参考"></a>二、git相关的一些参考</h3><p><a href="https://marklodato.github.io/visual-git-guide/index-zh-cn.html" target="_blank" rel="noopener">图解Git</a>，有图比较容易理解每个命令执行的逻辑</p>
+<h3 id="二、git的使用场景"><a href="#二、git的使用场景" class="headerlink" title="二、git的使用场景"></a>二、git的使用场景</h3><p>本地工作：</p>
+<ol>
+<li>先获取最新code</li>
+<li>新建branch</li>
+<li>新增/编辑/删除 files</li>
+<li>提交到缓存区</li>
+<li>提交到服务器</li>
+</ol>
+<p>提交code到服务器：</p>
+<ol>
+<li>查看变动（查看commit log）</li>
+</ol>
+<p>master branch的维护：</p>
+<ol>
+<li>diff比较一个需要升级为master的branch（假设是feature），解决冲突</li>
+<li>合并为master（feature消失）</li>
+</ol>
+<p>▲什么时候commit<br>  – 任何时候都可以，但message需要按格式书写，方便维护和生成Log</p>
+<p>▲commit注释写什么，怎么写<br>  – 参考格式规范，如：fix修复，feat新功能 等<br>  <a href="https://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html" target="_blank" rel="noopener">阮一峰老师的建议 - Commit message 和 Change log 编写指南</a></p>
+<h3 id="三、git相关的一些参考"><a href="#三、git相关的一些参考" class="headerlink" title="三、git相关的一些参考"></a>三、git相关的一些参考</h3><p><a href="http://rogerdudler.github.io/git-guide/index.zh.html" target="_blank" rel="noopener">git - 简明指南</a></p>
+<p><a href="https://blog.csdn.net/buknow/article/details/80325986" target="_blank" rel="noopener">小白入门~ GitHub和Git超详细使用教程<del>~</del></a></p>
+<p><a href="https://marklodato.github.io/visual-git-guide/index-zh-cn.html" target="_blank" rel="noopener">图解Git</a>，有图比较容易理解每个命令执行的逻辑</p>
+<p><a href="https://git-scm.com/book/zh/v2/" target="_blank" rel="noopener">Pro Git Book</a></p>
 <p><a href="https://zhuanlan.zhihu.com/p/62071906" target="_blank" rel="noopener">工作、开源两不误：Git多账号管理</a>，一台电脑使用多个账号时的解决办法</p>
 <p>window平台自建git服务器的思路：服务端gitblit + 客户端git for windows<br><a href="https://bonobogitserver.com/" target="_blank" rel="noopener">一款window平台自建git服务器的开源软件 Bonobo Git Server</a></p>
 

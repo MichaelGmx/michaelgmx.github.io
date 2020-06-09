@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="https://michaelgmx.github.io">
   <title>angularjs Directive中的scope设置 | 小麦片</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="值 继承&#x2F;隔离 理解 解释    false 继承不隔离 使用父scope 父子同享同一作用域   true 继承且隔离 使用父scope，但只单向 子使用父作用域初始化，而后建立自己的作用域   {} 不继承且隔离 使用自己独立的scope 父子使用各自的作用域   ** @ ** 方式局部属性用来访问 directive 外部环境定义的字符串值，主要是通过 directive 所在的标签">
+  <meta name="description" content="值 继承&#x2F;隔离 理解 解释    false 继承不隔离 使用父scope 父子同享同一作用域   true 继承且隔离 使用父scope，但只单向 子使用父作用域初始化，而后建立自己的作用域   {} 不继承且隔离 使用自己独立的scope 父子使用各自的作用域">
 <meta property="og:type" content="article">
 <meta property="og:title" content="angularjs Directive中的scope设置">
 <meta property="og:url" content="https://michaelgmx.github.io/2020/05/27/angularjs-directive-scope/index.html">
 <meta property="og:site_name" content="小麦片">
-<meta property="og:description" content="值 继承&#x2F;隔离 理解 解释    false 继承不隔离 使用父scope 父子同享同一作用域   true 继承且隔离 使用父scope，但只单向 子使用父作用域初始化，而后建立自己的作用域   {} 不继承且隔离 使用自己独立的scope 父子使用各自的作用域   ** @ ** 方式局部属性用来访问 directive 外部环境定义的字符串值，主要是通过 directive 所在的标签">
+<meta property="og:description" content="值 继承&#x2F;隔离 理解 解释    false 继承不隔离 使用父scope 父子同享同一作用域   true 继承且隔离 使用父scope，但只单向 子使用父作用域初始化，而后建立自己的作用域   {} 不继承且隔离 使用自己独立的scope 父子使用各自的作用域">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-05-27T15:25:57.000Z">
-<meta property="article:modified_time" content="2020-05-27T15:38:34.898Z">
+<meta property="article:modified_time" content="2020-06-09T15:39:58.599Z">
 <meta property="article:author" content="小麦片">
 <meta property="article:tag" content="angularjs">
 <meta property="article:tag" content="angularjs Directive">
@@ -55,7 +55,7 @@
 		  <h1 class="header-author"><a href="/">小麦片</a></h1>
 		</hgroup>
 		
-		<p class="header-subtitle">想做些什么，却又止步不前</p>
+		<p class="header-subtitle">小麦片何时长大...</p>
 		
 
 		<nav class="header-menu">
@@ -109,7 +109,7 @@
 			  <h1 class="header-author js-header-author">小麦片</h1>
 			</hgroup>
 			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>想做些什么，却又止步不前<i class="icon icon-quo-right"></i></p>
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>小麦片何时长大...<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -196,6 +196,8 @@
 <td>父子使用各自的作用域</td>
 </tr>
 </tbody></table>
+<a id="more"></a>
+
 <p>** @ ** 方式局部属性用来访问 directive 外部环境定义的字符串值，主要是通过 directive 所在的标签属性绑定外部字符串值。这种绑定是单向的，即父 scope 的绑定变化，directive 中的 scope 的属性会同步变化，而隔离 scope 中的绑定变化，父 scope 是不知道的。<br><strong>（父可以传子，子不可以传父）</strong></p>
 <p>** = ** 通过 directive 的 attr 属性的值在局部 scope 的属性和父 scope 属性名之间建立双向绑定。<br>意思是，当你想要一个双向绑定的属性的时候，你可以使用=来引入外部属性。无论是改变父 scope 还是隔离 scope 里的属性，父 scope 和隔离 scope 都会同时更新属性值，因为它们是双向绑定的关系。<br><strong>（互相传值）</strong></p>
 <p>** &amp; ** 方式提供一种途经是 directive 能在父 scope 的上下文中执行一个表达式。此表达式可以是一个 function。<br>比如当你写了一个 directive，当用户点击按钮时，directive 想要通知 controller，controller 无法知道 directive 中发生了什么，也许你可以通过使用 angular 中的 event 广播来做到，但是必须要在 controller 中增加一个事件监听方法。<br>最好的方法就是让 directive 可以通过一个父 scope 中的 function，当 directive 中有什么动作需要更新到父 scope 中的时候，可以在父 scope 上下文中执行一段代码或者一个函数。<br><strong>（子传父 表达式）</strong></p>
