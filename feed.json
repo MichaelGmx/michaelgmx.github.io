@@ -7,6 +7,18 @@
     "home_page_url": "https://michaelgmx.github.io",
     "items": [
         {
+            "id": "https://michaelgmx.github.io/qrcode-generator/",
+            "url": "https://michaelgmx.github.io/qrcode-generator/",
+            "title": "QRCode 生成器",
+            "date_published": "2024-12-20T04:40:21.000Z",
+            "content_html": "<h3 id=\"碎碎念\"><a class=\"anchor\" href=\"#碎碎念\">#</a> 碎碎念</h3>\n<p>使用 的是 Github 用户 <strong>davidshimjs</strong> 的插件<a href=\"https://github.com/davidshimjs/qrcodejs\"> qrcodejs</a></p>\n<blockquote>\n<p>ps. 大佬 10 年前的代码还在输出</p>\n</blockquote>\n<p>二维码中间 logo 图片的自定义暂未加入<br />\n对插件的修改见 <a href=\"https://github.com/michaelgmx/qrcodejs\">qrcodejs</a></p>\n<p>待完成:</p>\n<ul class=\"task-list\">\n<li class=\"task-list-item\"><input type=\"checkbox\" id=\"cbx_0\" disabled=\"true\" /><label for=\"cbx_0\"> logo 图片的自定义</label></li>\n<li class=\"task-list-item\"><input type=\"checkbox\" id=\"cbx_1\" disabled=\"true\" /><label for=\"cbx_1\"> 使用 LocalStorage 记录 生成历史</label></li>\n</ul>\n<h3 id=\"效果\"><a class=\"anchor\" href=\"#效果\">#</a> 效果</h3>\n<p><iframe src=\"/HTML/qrcode-generator/index.html\" width=\"100%\" height=\"600px\" frameborder=\"0\" loading=\"lazy\" allowfullscreen></iframe></p>\n",
+            "tags": [
+                "javascript",
+                "javascript",
+                "QRCode"
+            ]
+        },
+        {
             "id": "https://michaelgmx.github.io/markdown-it/",
             "url": "https://michaelgmx.github.io/markdown-it/",
             "title": "markdown 语法加强",

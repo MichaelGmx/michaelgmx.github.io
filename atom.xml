@@ -8,7 +8,31 @@
     <author>
       <name>小麦片</name>
     </author>
-    <updated>2024-12-20T03:31:30.000Z</updated>
+    <updated>2024-12-20T04:40:21.000Z</updated>
+    <entry>
+        <id>https://michaelgmx.github.io/qrcode-generator/</id>
+        <title>QRCode 生成器</title>
+        <link rel="alternate" href="https://michaelgmx.github.io/qrcode-generator/"/>
+        <content type="html">&lt;h3 id=&#34;碎碎念&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#碎碎念&#34;&gt;#&lt;/a&gt; 碎碎念&lt;/h3&gt;
+&lt;p&gt;使用 的是 Github 用户 &lt;strong&gt;davidshimjs&lt;/strong&gt; 的插件&lt;a href=&#34;https://github.com/davidshimjs/qrcodejs&#34;&gt; qrcodejs&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ps. 大佬 10 年前的代码还在输出&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;二维码中间 logo 图片的自定义暂未加入&lt;br /&gt;
+对插件的修改见 &lt;a href=&#34;https://github.com/michaelgmx/qrcodejs&#34;&gt;qrcodejs&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;待完成:&lt;/p&gt;
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li class=&#34;task-list-item&#34;&gt;&lt;input type=&#34;checkbox&#34; id=&#34;cbx_0&#34; disabled=&#34;true&#34; /&gt;&lt;label for=&#34;cbx_0&#34;&gt; logo 图片的自定义&lt;/label&gt;&lt;/li&gt;
+&lt;li class=&#34;task-list-item&#34;&gt;&lt;input type=&#34;checkbox&#34; id=&#34;cbx_1&#34; disabled=&#34;true&#34; /&gt;&lt;label for=&#34;cbx_1&#34;&gt; 使用 LocalStorage 记录 生成历史&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;效果&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#效果&#34;&gt;#&lt;/a&gt; 效果&lt;/h3&gt;
+&lt;p&gt;&lt;iframe src=&#34;/HTML/qrcode-generator/index.html&#34; width=&#34;100%&#34; height=&#34;600px&#34; frameborder=&#34;0&#34; loading=&#34;lazy&#34; allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;
+</content>
+        <category term="javascript" scheme="https://michaelgmx.github.io/categories/javascript/" />
+        <category term="javascript" scheme="https://michaelgmx.github.io/tags/javascript/" />
+        <category term="QRCode" scheme="https://michaelgmx.github.io/tags/QRCode/" />
+        <updated>2024-12-20T04:40:21.000Z</updated>
+    </entry>
     <entry>
         <id>https://michaelgmx.github.io/markdown-it/</id>
         <title>markdown 语法加强</title>

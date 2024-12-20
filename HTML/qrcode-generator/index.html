@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+    content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>QRCode Generator</title>
+
+  <link href="./assets/bootstrap.min.css" rel="stylesheet">
+  <link href="./assets/index.css" rel="stylesheet">
+
+  <script src="./assets/jquery.min.js"></script>
+  <script src="./assets/bootstrap.bundle.min.js"></script>
+  <script src="./assets/qrcode.min.js"></script>
+</head>
+
+<body class="container">
+
+  <main>
+    <h3>QRCode Generator</h3>
+
+    <form id="myForm">
+      <div class="input-group">
+        <input type="text" class="form-control" id="textValue" required placeholder="输入内容">
+        <button type="button" class="btn btn-primary" id="btn-generate">生成</button>
+        <div class="invalid-feedback">
+          输入内容 不能为空
+        </div>
+      </div>
+    </form>
+
+    <div class="qrcode-wrapper">
+      <div id="qrcode"></div>
+      <div id="result-text"></div>
+
+      <div class="action-bar d-none">
+        <button type="button" id="btn-download" class="btn btn-success">下载二维码</button>
+        <button type="button" id="btn-reset" class="btn btn-secondary">重置</button>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Modal Start -->
+  <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="downloadModalLabel">自定义文件名</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="input-group">
+            <input type="text" id="fileName" class="form-control" placeholder="请输入文件名" value="qrcode">
+            <span class="input-group-text" id="basic-addon2">.png</span>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary btn-lg" onclick="downloadQRCode()">下载</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal End -->
+
+
+  <script type="text/javascript">
+    let modal;
+    $(document).ready(() => {
+      modal = new bootstrap.Modal($('#myModal'));
+    });
+
+
+    // 点击 生成按钮
+    $('#btn-generate').click(() => {
+      event.preventDefault();
+      const $form = $('#myForm')[0];
+      if (!$form.checkValidity()) {
+        event.stopPropagation();
+        $form.classList.add('was-validated');
+
+        // Find the first invalid element
+        const firstInvalidElement = $($form).find(':invalid').first()
+        if (firstInvalidElement.length) {
+          // Scroll to the first invalid element
+          $('html, body').animate({
+            scrollTop: firstInvalidElement.offset().top - 30
+          }, 'smooth');
+          firstInvalidElement.focus();
+        }
+
+        return;
+      }
+
+      const textValue = $('#textValue').val();
+
+      // reset
+      resetAction();
+
+      // generate QrCode
+      const qrcodeSize = 280;
+
+      new QRCode(document.getElementById("qrcode"), {
+        text: textValue,
+        width: qrcodeSize,
+        height: qrcodeSize,
+        // imgWidth: 32,
+        // imgHeight: 32,
+        // logo: 'http://xxx',
+        colorDark: "#000000",
+        colorLight: "#ffffff",
+        correctLevel: QRCode.CorrectLevel.H
+      });
+
+      $('#result-text').text(textValue);
+      $('.action-bar').removeClass('d-none');
+    });
+
+    // 下载二维码 Action
+    const downloadQRCode = () => {
+      const fileName = document.getElementById('fileName').value + '.png' || 'qrcode.png';
+      const qrcodeImg = document.querySelector('#qrcode img');
+      const imgURL = qrcodeImg.src;
+      const link = document.createElement('a');
+      link.href = imgURL;
+      link.download = fileName;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+
+      $('#fileName').val('qrcode');
+      modal.hide();
+    }
+
+    // 点击 下载二维码按钮
+    $('#btn-download').click(function () {
+      modal.show();
+      // $('#fileName').focus();
+    });
+
+    // 重置 Action
+    const resetAction = () => {
+      $('#textValue').val('');
+      $('#myForm').removeClass('was-validated');
+
+      $('#qrcode').html('');
+      $('#result-text').text('');
+      $('.action-bar').addClass('d-none');
+    }
+
+    // 点击 重置按钮
+    $('#btn-reset').click(function () {
+      resetAction();
+    });
+  </script>
+</body>
+
+</html>
