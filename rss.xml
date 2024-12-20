@@ -10,8 +10,47 @@
         </author>
         <description></description>
         <language>zh-CN</language>
-        <pubDate>Thu, 19 Dec 2024 10:00:00 +0800</pubDate>
-        <lastBuildDate>Thu, 19 Dec 2024 10:00:00 +0800</lastBuildDate>
+        <pubDate>Fri, 20 Dec 2024 11:31:30 +0800</pubDate>
+        <lastBuildDate>Fri, 20 Dec 2024 11:31:30 +0800</lastBuildDate>
+        <item>
+            <guid isPermalink="true">https://michaelgmx.github.io/markdown-it/</guid>
+            <title>markdown 语法加强</title>
+            <link>https://michaelgmx.github.io/markdown-it/</link>
+            <category term="markdown" scheme="https://michaelgmx.github.io/categories/markdown/" />
+            <category term="markdown" scheme="https://michaelgmx.github.io/tags/markdown/" />
+            <pubDate>Fri, 20 Dec 2024 11:31:30 +0800</pubDate>
+            <description><![CDATA[ &lt;h3 id=&#34;前言&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h3&gt;
+&lt;p&gt;查看  &lt;code&gt;package.json&lt;/code&gt;  发现 使用的这个主题  &lt;code&gt;shokax&lt;/code&gt;  没有使用 hexo 默认的 markdown 渲染（ &lt;code&gt;hexo-renderer-markdown&lt;/code&gt; ），而是使用了自己定制的  &lt;code&gt;hexo-renderer-multi-next-markdown-it&lt;/code&gt; 。&lt;/p&gt;
+&lt;p&gt;这不是关键，待我找到 &lt;code&gt;hexo-renderer-multi-next-markdown-it&lt;/code&gt;  的 &lt;a href=&#34;https://github.com/theme-shoka-x/hexo-renderer-multi-next-markdown-it/&#34;&gt;Github&lt;/a&gt;，&lt;br /&gt;
+发现 作者又是对另一个  &lt;code&gt;hexo-renderer-multi-markdown-it&lt;/code&gt;  做了定制。&lt;/p&gt;
+&lt;p&gt;还没有结束， &lt;code&gt;hexo-renderer-multi-markdown-it&lt;/code&gt;  又又又又是对  &lt;code&gt;markdown-it&lt;/code&gt;  做了定制。&lt;br /&gt;
+ &lt;code&gt;markdown-it&lt;/code&gt;  其中包含 我这次真正想用的 &lt;a href=&#34;https://github.com/markdown-it/markdown-it-container&#34;&gt;markdown-it-container&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;只能说大佬们玩得太花，无限套娃。😹&lt;/p&gt;
+&lt;h3 id=&#34;正文&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#正文&#34;&gt;#&lt;/a&gt; 正文&lt;/h3&gt;
+&lt;p&gt;下面记录一下，目前使用过的一些语法&lt;/p&gt;
+&lt;h4 id=&#34;1-markdown-it-container&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-markdown-it-container&#34;&gt;#&lt;/a&gt; 1. &lt;a href=&#34;https://github.com/markdown-it/markdown-it-container&#34;&gt;markdown-it-container&lt;/a&gt;&lt;/h4&gt;
+&lt;figure class=&#34;highlight markdown&#34;&gt;&lt;figcaption data-lang=&#34;markdown&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token title important&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;#&lt;/span&gt; 示例格式：&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;::: default&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;default 文字测试&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;:::&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;可选样式有 &lt;strong&gt;default | primary | success | info | warning | danger&lt;/strong&gt;&lt;br /&gt;
+ 效果：&lt;/p&gt;
+&lt;div class=&#34;note default&#34;&gt;
+&lt;p&gt;default 文字测试&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;note primary&#34;&gt;
+&lt;p&gt;primary 文字测试&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;note success&#34;&gt;
+&lt;p&gt;success 文字测试&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;info 文字测试&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;note warning&#34;&gt;
+&lt;p&gt;warning 文字测试&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;note danger&#34;&gt;
+&lt;p&gt;danger 文字测试&lt;/p&gt;
+&lt;/div&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://michaelgmx.github.io/hello-hexo/</guid>
             <title>你好，Hexo</title>
@@ -34,9 +73,9 @@
 &lt;p&gt;&lt;s&gt;1. 安装 hexo-asset-image 插件&lt;/s&gt;&lt;br /&gt;
 &lt;s&gt; 2. 修改插件中 code (参考上面 Url 中的指示)&lt;/s&gt;&lt;br /&gt;
 &lt;s&gt; 3. 图片链接使用&lt;/s&gt;&lt;/p&gt;
-&lt;figure class=&#34;highlight md&#34;&gt;&lt;figcaption data-lang=&#34;Markdown&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token title important&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;#&lt;/span&gt; 格式： ![图片名称](./文章名/图片名.后缀)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token title important&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;#&lt;/span&gt; eg.&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token url&#34;&gt;&lt;span class=&#34;token operator&#34;&gt;!&lt;/span&gt;[&lt;span class=&#34;token content&#34;&gt;android_sdk_support_error&lt;/span&gt;](&lt;span class=&#34;token url&#34;&gt;./android-build-error/android_sdk_support_error.png&lt;/span&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;blockquote&gt;
+&lt;figure class=&#34;highlight md&#34;&gt;&lt;figcaption data-lang=&#34;Markdown&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token title important&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;#&lt;/span&gt; 格式： ![图片名称](./文章名/图片名.后缀)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token title important&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;#&lt;/span&gt; eg.&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token url&#34;&gt;&lt;span class=&#34;token operator&#34;&gt;!&lt;/span&gt;[&lt;span class=&#34;token content&#34;&gt;android_sdk_support_error&lt;/span&gt;](&lt;span class=&#34;token url&#34;&gt;./android-build-error/android_sdk_support_error.png&lt;/span&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;div class=&#34;note danger&#34;&gt;
 &lt;p&gt;hexo7.x 版本修改了渲染方式  &lt;code&gt;hexo-asset-image&lt;/code&gt;  插件已归档 (长时间未维护)，所以不能使用了&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;/div&gt;
 &lt;p&gt;替换方案为：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;添加图片至  &lt;code&gt;/source/_data/assets/文章名/图片.后缀&lt;/code&gt;&lt;/li&gt;
